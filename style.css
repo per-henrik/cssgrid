@@ -1,0 +1,51 @@
+/** START generic elements **/
+* {margin:0;padding:0;}
+body {
+  display:grid;
+  grid-template-columns:repeat(6, 1fr);
+  margin: 0 10%;
+  padding-bottom:auto;
+  font-family: 'Noto Serif', serif;
+}
+em {
+  font-style:normal;
+  color:orange
+}
+body>* {
+  grid-column: 1 / span 4;
+}
+/** END generic elements **/
+
+/** START Menu **/
+nav {
+  grid-column: 1 / span 6;
+}
+menuitem {
+  margin: 1%;
+}
+menu {
+  text-align: center;
+}
+/** END Menu **/
+
+/** START layouts **/
+header {
+  margin:20% 0;
+  grid-column: 1 / 12;
+  padding: 0.5em 0;
+  text-align:center;
+}
+/** END layouts **/
+
+/** START Header **/
+header dt{
+  font-size:3em;
+  font-family: 'Noto Sans', sans-serif;
+}
+/** END Header **/
+
+/** START debuglayout **/
+#debuglayout:target *{
+  outline: dotted 1px red;
+}
+/** END debuglayout **/
