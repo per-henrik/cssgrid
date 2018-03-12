@@ -10,6 +10,9 @@ em {
   font-style:normal;
   color:tomato
 }
+/** END generic elements **/
+
+/** START sections **/
 section#innledning {
   grid-template-columns:repeat(6, 1fr);
   display:grid;
@@ -26,6 +29,7 @@ section#innledning p {
   grid-column: 3 / span 3 ;
   padding-left:5%;
 }
+/*==================================================*/
 section#slagord {
   margin:20% 0;
   padding: 5% 10%;
@@ -34,6 +38,7 @@ section#slagord {
   background-color: tomato;
   color:white;
 }
+/*==================================================*/
 section#tjenester {
   grid-template-columns:repeat(2, 1fr);
   margin:0 10%;
@@ -72,14 +77,11 @@ section#tjenester h2:after {
   width: 35px;
   margin: 25px auto;
 }
-a[ id= "next" ]:target ~ #main article.panel {
-    -webkit-transform: translateY( -1000px );
-    transform: translateY( -1000px );
-}
 section#tjenester section {
   padding-right:10%;
   grid-column: auto / span 1;
 }
+/*==================================================*/
 section#teknologi {
   grid-template-columns:repeat(3, 1fr);
   margin:20% 10%;
@@ -96,12 +98,66 @@ section#teknologi div.gradline{
   grid-column: auto / span 3;
   margin: 0px 0 100px;
   height: 1px;
-  background: black;
-  background: -webkit-gradient(linear, 0 0, 100% 0, from(white), to(white), color-stop(50%, tomato));
+  background:
+    gradient(
+      linear,
+      0 0,
+      100% 0,
+      from(white),
+      to(white),
+      color-stop(50%, tomato)
+    );
 }
 section#teknologi section {
   padding-right: 10%;
 }
+/** END sections **/
+
+/** START Header **/
+header {
+  padding:20% 0;
+  grid-column: 1 / 12;
+  text-align:center;
+  min-height:100%;
+  background-image:url('landscape.svg');
+  background-size: 100% auto;
+  background-repeat:no-repeat;
+  background-position: bottom;
+}
+header dt{
+  font-size:2.2em;
+  font-family: 'Noto Sans', sans-serif;
+}
+/** END Header **/
+
+/** START Menu **/
+nav {
+  grid-column: 1 / span 6;
+}
+menuitem a {
+  margin: 1% 1% ;
+  border-radius: 40px;
+  background-color: #1d3c65;
+  text-transform: uppercase;
+  padding:1% 5%;
+  height:40px;
+  font-family: 'Noto Sans', sans-serif;
+  letter-spacing:3px;
+  text-decoration: none;
+  color:white;
+  transition: all .2s ease-in-out;
+
+}
+menuitem a:hover {
+  background-color: tomato;
+}
+
+menu {
+  text-align: center;
+}
+/** END Menu **/
+
+/** START footer **/
 footer {
   min-height:80vh;
   background-color: #1d3c65;
@@ -131,75 +187,7 @@ footer a {
   color:black;
   text-decoration:none;
 }
-
-/** START clipboard **/
-
-/** END clipboard **/
-/** END generic elements **/
-
-/** START Menu **/
-nav {
-  grid-column: 1 / span 6;
-}
-menuitem a {
-  margin: 1% 2% ;
-  border-radius: 40px;
-  background-color: #1d3c65;
-  text-transform: uppercase;
-  padding:1% 5%;
-  height:40px;
-  position:relative;
-  top:0;
-  left:0;
-  font-family: 'Noto Sans', sans-serif;
-  letter-spacing:3px;
-  text-decoration: none;
-  color:white;
-  transition: all .2s ease-in-out;
-
-}
-menuitem a:hover {
-  background-color: tomato;
-}
-
-menu {
-  text-align: center;
-}
-/** END Menu **/
-
-/** START layouts **/
-header {
-  padding:20% 0;
-  grid-column: 1 / 12;
-  text-align:center;
-  min-height:100%;
-  background-image:url('landscape.svg');
-  background-size: 100% auto;
-  background-repeat:no-repeat;
-  background-position: bottom;
-}
-/** END layouts **/
-
-/** START Header **/
-header {
-
-}
-header dt{
-  font-size:3em;
-  font-family: 'Noto Sans', sans-serif;
-}
-canvas#header-background {
-  height: 80vh;
-  position: absolute;
-  margin-left: auto;
-  margin-right: auto;
-  left: 0;
-  right: 0;
-  top:0;
-  z-index: -100;
-  }
-
-/** END Header **/
+/** END footer **/
 
 /** START debuglayout **/
 #debuglayout:target *{

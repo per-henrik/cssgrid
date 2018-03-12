@@ -1,0 +1,45 @@
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 600px) {
+
+  /** START sections **/
+  section#innledning {
+    grid-template-columns:repeat(1, 1fr);
+    display:grid;
+    margin: 10% 0;
+  }
+  section#innledning h1{
+    grid-column: 1 / span 1;
+  }
+  section#innledning quote{
+    display:block;
+  }
+  section#innledning p {
+    grid-column: 1;
+  }
+  /*==================================================*/
+
+
+  /** START Header **/
+  header dt{
+    font-size:1em;
+  }
+  /** END Header **/
+
+  /** START Menu **/
+  nav {
+  }
+  menuitem a {
+    border-radius: 0;
+    line-height: 2.4em;
+    display:block;
+  }
+  menuitem a:active {
+    background-color: tomato;
+  }
+
+  menu {
+    text-align: center;
+  }
+  /** END Menu **/
+
+}
