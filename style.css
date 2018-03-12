@@ -1,28 +1,167 @@
 /** START generic elements **/
 * {margin:0;padding:0;}
 body {
-  display:grid;
-  grid-template-columns:repeat(6, 1fr);
-  margin: 0 10%;
-  padding-bottom:auto;
+  margin:0;
   font-family: 'Noto Serif', serif;
+  min-height: 100vh;
+  font-size:110%;
 }
 em {
   font-style:normal;
-  color:orange
+  color:tomato
 }
-body>* {
-  grid-column: 1 / span 4;
+section#innledning {
+  grid-template-columns:repeat(6, 1fr);
+  display:grid;
+  margin: 10% 0;
 }
+section#innledning h1{
+  grid-column: 2 / span 1;
+  text-align:center;
+}
+section#innledning h1 quote:before {
+  font-size:200%;
+}
+section#innledning p {
+  grid-column: 3 / span 3 ;
+  padding-left:5%;
+}
+section#slagord {
+  margin:20% 0;
+  padding: 5% 10%;
+  font-size:200%;
+  text-align:center;
+  background-color: tomato;
+  color:white;
+}
+section#tjenester {
+  grid-template-columns:repeat(2, 1fr);
+  margin:0 10%;
+  display:grid;
+  text-align:center;
+}
+section#tjenester h1{
+  grid-column: 1 / span 3;
+  margin:50% 0;
+  text-align:center;
+}
+section#tjenester quote {
+  height: 175px;
+  width: 175px;
+  line-height: 175px;
+  max-width: 100%;
+  background: #1d3c65;
+  border-radius: 50%;
+  -o-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  display: block;
+  color: #fff;
+  font-size: 55px;
+  text-align: center;
+  vertical-align: middle;
+  position: relative;
+  margin: 0 auto 50px;
+  text-shadow: 0px 0px 50px rgba(255, 255, 255, 0.7),0px 0px 40px rgba(255, 255, 255, 0.8),0px 0px 1px rgba(255, 255, 255, 0.9);
+
+}
+section#tjenester h2:after {
+  content: " ";
+  border: solid 2px #2e6aa4;
+  display: block;
+  width: 35px;
+  margin: 25px auto;
+}
+a[ id= "next" ]:target ~ #main article.panel {
+    -webkit-transform: translateY( -1000px );
+    transform: translateY( -1000px );
+}
+section#tjenester section {
+  padding-right:10%;
+  grid-column: auto / span 1;
+}
+section#teknologi {
+  grid-template-columns:repeat(3, 1fr);
+  margin:20% 10%;
+  display:grid;
+  text-align: center;
+}
+section#teknologi h1{
+  grid-column: auto / span 3;
+  font-family: 'Noto Sans', sans-serif;
+  font-size:3em;
+  text-transform:uppercase;
+}
+section#teknologi div.gradline{
+  grid-column: auto / span 3;
+  margin: 0px 0 100px;
+  height: 1px;
+  background: black;
+  background: -webkit-gradient(linear, 0 0, 100% 0, from(white), to(white), color-stop(50%, tomato));
+}
+section#teknologi section {
+  padding-right: 10%;
+}
+footer {
+  min-height:80vh;
+  background-color: #1d3c65;
+  grid-template-columns:repeat(3, 1fr);
+  padding:2% 10% 20%;
+  margin-top:20%;
+  display:grid;
+  text-align: center;
+}
+footer section {
+  grid-column: auto / span 1;
+  background-color: white;
+  padding:40% 0%;
+  margin:0 5%;
+}
+footer quote:before {
+  font-size:300%;
+  color:tomato;
+}
+footer h2 {
+  font-family: 'Noto Sans', sans-serif;
+}
+footer p {
+  font-size:80%;
+}
+footer a {
+  color:black;
+  text-decoration:none;
+}
+
+/** START clipboard **/
+
+/** END clipboard **/
 /** END generic elements **/
 
 /** START Menu **/
 nav {
   grid-column: 1 / span 6;
 }
-menuitem {
-  margin: 1%;
+menuitem a {
+  margin: 1% 2% ;
+  border-radius: 40px;
+  background-color: #1d3c65;
+  text-transform: uppercase;
+  padding:1% 5%;
+  height:40px;
+  position:relative;
+  top:0;
+  left:0;
+  font-family: 'Noto Sans', sans-serif;
+  letter-spacing:3px;
+  text-decoration: none;
+  color:white;
+  transition: all .2s ease-in-out;
+
 }
+menuitem a:hover {
+  background-color: tomato;
+}
+
 menu {
   text-align: center;
 }
@@ -30,18 +169,36 @@ menu {
 
 /** START layouts **/
 header {
-  margin:20% 0;
+  padding:20% 0;
   grid-column: 1 / 12;
-  padding: 0.5em 0;
   text-align:center;
+  min-height:100%;
+  background-image:url('landscape.svg');
+  background-size: 100% auto;
+  background-repeat:no-repeat;
+  background-position: bottom;
 }
 /** END layouts **/
 
 /** START Header **/
+header {
+
+}
 header dt{
   font-size:3em;
   font-family: 'Noto Sans', sans-serif;
 }
+canvas#header-background {
+  height: 80vh;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  top:0;
+  z-index: -100;
+  }
+
 /** END Header **/
 
 /** START debuglayout **/

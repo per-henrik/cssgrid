@@ -4,8 +4,10 @@
     <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
+    <script src="scrollTo.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans:700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Per Henrik Oja - Webutvikler</title>
   </head>
   <body id="debuglayout">
@@ -16,16 +18,99 @@
           <dd>Webutvikler</dd>
         </dl>
       </h1>
-      </header>
-      <nav>
-        <menu>
-          <menuitem>Yo</menuitem>
-          <menuitem>Salut</menuitem>
-          <menuitem>Hello</menuitem>
-          <menuitem>Hei</menuitem>
-        </menu>
-      </nav>
-    <h1> Overskrift </h1>
-    <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </header>
+    <nav>
+      <menu>
+        <menuitem><a href="#tjenester" onclick="test('tjenester'); return false;">Tjenester</a></menuitem>
+        <menuitem><a href="#teknologi" onclick="test('teknologi'); return false;">Teknologi</a></menuitem>
+        <menuitem><a href="#kontakt" onclick="test('kontakt'); return false;">Kontakt</a></menuitem>
+      </menu>
+    </nav>
+    <section id="innledning">
+      <h1>
+        <quote class="fa fa-handshake-o"></quote>
+        Kommunikasjon og utvikling hånd i hånd
+      </h1>
+      <p>
+        All min arbeiderfaring har vært dedikert kommunikasjon og kunnskapsformidling. Nå starter jeg som freelancer og kan tilby komplette webløsninger. Primært for mindre og mellomstore bedrifter. Mitt hovedmål er å utrydde utdaterte sider som gjør lite positivt for virksomheten.
+        <br><br>
+        Se min CV på Linkedin for mer om min bakgrunn:https://www.linkedin.com/in/peroja
+        <br><br>
+        For en mindre virksomhet handler nettsynlighet ofte om tydelig produktbeskrivelse og kontaktinformasjon. Leveres dette i en tidsriktig drakt og slik at Google-brukere finner siden vil det særs ofte gi økt kundetilfang.
+      </p>
+    </section>
+    <section id="slagord">
+      <h1>Gjør du det du vil, gjør du det bra.</h1>
+    </section>
+    <section id="tjenester">
+      <section>
+        <quote class="fa fa-code"></quote>
+        <h2>Webutvikling</h2>
+        <p>
+          Jeg leverer hele spekteret av webtjenster, fra ide og konsept til ferdige løsninger. Ved spesielle behov tilknytter jeg meg ekspertise på grafisk design, interaksjonsdesign, drift og strategi. Og blir oppdrag for store kan jeg videresende enten deler eller hele prosjekt. Jeg er også behjelpelig med mindre oppdrag som oppdatering av eksisterende sider eller løser tekniske floker for kunder.
+        </p>
+      </section>
+      <section>
+        <quote class="fa fa-heart"></quote>
+        <h2>Rådgiving</h2>
+        <p>
+          Kunder kontakter meg ofte for råd og jeg kan oftes hjelpe dem med å stake ut veien videre. Rørleggere bør nok ha mer fokus på å legge rør enn å lage nettsider. Oppdrag jeg har utført spenner fra en enkelt time til komplette strategier. Kunden kan få råd om hvordan løse enkle problemer. Men ofte rådgir jeg større strategiske satsinger på nettmarkedsføring. Jeg har også gjennomført en del strategirevisjoner og tredjepartsvurderinger av prosjekter.
+        </p>
+      </section>
+<!--
+      <section>
+        <quote class="fa fa-hotel"></quote>
+        <h2>Hosting</h2>
+        <p>
+          Jeg har driftet Linux i en eller annen form siden forrige årtusen. Har hatt Mandrake, Redhad, Mint og Ubuntu i drift. Men foretrekker Debian. Jeg har hatt kunder som har på eget initiativ dokumentert at epost og web levert av meg er mer stabilt og med mindre datatap enn Google. Jeg mener fortsatt det er viktig å sikre katteblogens oppetid. Selv om jeg i dag stort sett drifter alt på virtuelle maskiner utenfor min egen kontroll.<br> <a href="https://xkcd.com/705/">Se https://xkcd.com/705/</a>
+        </p>
+      </section>
+-->
+    </section>
+    <section id="teknologi">
+      <h1>Teknologi</h1>
+      <div class="gradline"> </div>
+      <section>
+        <img src="hugo-symbol.png" style="width:186px;heigh:186px;">
+        <h2>Hugo</h2>
+        <p>Mitt aller nyeste bekjentskap! Hugo. Perfekt for kjappe små og ryddige sider. Uovertruffen sikkerhet hostet på Netlify.</p>
+        <p><a href="https://gohugo.io">https://gohugo.io</a></p>
+      </section>
+      <section>
+        <img src="debian-symbol.svg" alt="Team" draggable="false">
+        <h2>Debian</h2>
+        <p>Open kildekode er like viktig som verdiskapning som prinsipp. Debian er vertskapet som gir alle mine prosjekter hotellrom. Kjapp, tilpasningsdyktig og går ned sjeldnere enn Dovre.</p>
+        <p><a href="https://debian.org">https://debian.org</a></p>
+      </section>
+      <section>
+        <img src="d8-symbol.svg" alt="Team" draggable="false">
+        <h2>Drupal</h2>
+        <p>Publiseringssystemet Drupal er min gode gamle bestevenn. Fantastisk kode. Enorm brukerbase og et enda større utviklermiljø!</p>
+        <p><a href="https://drupal.org">https://drupal.org</a></p>
+      </section>
+    </section>
+    <footer id="kontakt">
+      <a href="https://www.google.no/maps/dir/60.4918383,11.1566386/Webutvikler+Per+Henrik+Oja+Feiringvegen+1250/@60.4911768,11.1539418,17z/data=!3m1!4b1!4m17!1m7!3m6!1s0x4641f2b210a40311:0xf90b8eeedbd13d43!2sFeiringvegen+1250,+2093+Feiring!3b1!8m2!3d60.4918387!4d11.1566573!4m8!1m0!1m5!1m1!1s0x4641f2b2640610c1:0xdfca6e02a471d36d!2m2!1d11.1555872!2d60.4911668!3e0?hl=en">
+        <section>
+          <quote class="fa fa-map-marker"></quote>
+          <h2>Address</h2>
+          <p>Feiringveien 1250, 2093 Feiring, Norway</p>
+        </section>
+      </a>
+      <a href="tel:+47-40-21-84-22">
+        <section>
+          <quote class="fa fa-mobile"></quote>
+          <h2>Phone</h2>
+          <p>+47 402 18 422</p>
+        </section>
+      </a>
+      <a href="mailto:per@ja.no">
+        <section>
+          <quote class="fa fa-paper-plane"></quote>
+          <h2>Epost</h2>
+          <p>per@oja.no</p>
+        </section>
+      </a>
+    </footer>
   </body>
 </html>
