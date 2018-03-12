@@ -1,5 +1,11 @@
 /* On screens that are 600px or less, set the background color to olive */
 @media screen and (max-width: 600px) {
+  /** START Header **/
+  header dt{
+    font-size:0.2em;
+    font-family: 'Noto Sans', sans-serif;
+  }
+  /** END Header **/
 
   /** START sections **/
   section#innledning {
@@ -7,6 +13,7 @@
     display:grid;
     margin: 10% 0;
   }
+
   section#innledning h1{
     grid-column: 1 / span 1;
   }
