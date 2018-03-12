@@ -98,8 +98,9 @@ section#teknologi div.gradline{
   grid-column: auto / span 3;
   margin: 0px 0 100px;
   height: 1px;
+  background-color: tomato;
   background:
-    gradient(
+    -webkit-gradient(
       linear,
       0 0,
       100% 0,
